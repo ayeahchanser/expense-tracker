@@ -4,3 +4,9 @@ export interface Batch {
     startDate: Date;
     endDate: Date;
 }
+
+export interface BatchState {
+    isLoading: boolean;
+    batch: Batch;
+    batches: Batch[];
+}

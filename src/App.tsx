@@ -1,12 +1,11 @@
 import React, { FC } from "react";
-import { Button } from "antd";
+import AppLayout from "./Layout/AppLayout";
 
 const App: FC = () => {
   return (
-    <div className="App">
-      <h3>Expense Tracker</h3>
-      <Button type="primary">Testing...</Button>
-    </div>
+    <AppLayout>
+      <h2>Welcome Page</h2>
+    </AppLayout>
   );
 };
 
