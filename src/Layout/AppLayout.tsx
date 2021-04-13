@@ -1,5 +1,5 @@
-import { Layout, Menu, Breadcrumb } from "antd";
-import { FC } from "react";
+import { Layout, Menu, Row, Col } from "antd";
+import React, { FC } from "react";
 
 const AppLayout: FC = ({ children }) => {
   const { Header, Content, Footer } = Layout;
@@ -8,18 +8,13 @@ const AppLayout: FC = ({ children }) => {
       <Header>
         <div className="logo" />
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
-          <Menu.Item key="1">nav 1</Menu.Item>
-          <Menu.Item key="2">nav 2</Menu.Item>
-          <Menu.Item key="3">nav 3</Menu.Item>
+          <Menu.Item key="1">Transactions</Menu.Item>
         </Menu>
       </Header>
-      <Content style={{ padding: "0 50px" }}>
-        <Breadcrumb style={{ margin: "16px 0" }}>
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item>List</Breadcrumb.Item>
-          <Breadcrumb.Item>App</Breadcrumb.Item>
-        </Breadcrumb>
-        <div className="site-layout-content">{children}</div>
+      <Content>
+        <Row>
+          <Col span={24}>{children}</Col>
+        </Row>
       </Content>
       <Footer style={{ textAlign: "center" }}>
         Expense Tracker {new Date().getFullYear()} Created by SkyHack

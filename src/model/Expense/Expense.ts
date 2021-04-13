@@ -1,9 +1,9 @@
-import { Base } from "../Base";
+import { IBase } from "../Base";
 
-export interface Expense extends Base {}
-
-export interface ExpenseState {
-  isLoading: boolean;
-  expense: Expense;
-  expenses: Expense[];
+export interface IExpense extends IBase {}
+export interface IExpenseState {
+  readonly isLoading: boolean;
+  readonly expense: IExpense;
+  readonly expenses: IExpense[];
+  readonly errors: string;
 }
