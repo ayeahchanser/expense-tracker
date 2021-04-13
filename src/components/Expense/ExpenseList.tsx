@@ -10,7 +10,11 @@ export const ExpenseList: FC<ExpenseProps> = ({ expenses, renderItem }) => {
   return (
     <>
       {expenses.map((expense) =>
-        renderItem ? renderItem(expense) : <Expense expense={expense} />
+        renderItem ? (
+          renderItem(expense)
+        ) : (
+          <Expense key={expense.id} expense={expense} />
+        )
       )}
     </>
   );

@@ -10,7 +10,11 @@ export const BatchList: FC<BatchProps> = ({ batches, renderItem }) => {
   return (
     <>
       {batches.map((batch) =>
-        renderItem ? renderItem(batch) : <BatchComponent batch={batch} />
+        renderItem ? (
+          renderItem(batch)
+        ) : (
+          <BatchComponent key={batch.id} batch={batch} />
+        )
       )}
     </>
   );
